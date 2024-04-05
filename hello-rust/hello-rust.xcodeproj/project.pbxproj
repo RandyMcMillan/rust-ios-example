@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BF1A5462BC05F7400F8F45B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761FB8EF21FD03970077E882 /* ViewController.swift */; };
+		4BF1A5472BC05F7400F8F45B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761FB8ED21FD03970077E882 /* AppDelegate.swift */; };
+		4BF1A54A2BC05F7400F8F45B /* librust-sim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF1A5422BC05F5000F8F45B /* librust-sim.a */; };
+		4BF1A54C2BC05F7400F8F45B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761FB8F621FD03990077E882 /* LaunchScreen.storyboard */; };
+		4BF1A54D2BC05F7400F8F45B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761FB8F421FD03990077E882 /* Assets.xcassets */; };
+		4BF1A54E2BC05F7400F8F45B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761FB8F121FD03970077E882 /* Main.storyboard */; };
 		761FB8EE21FD03970077E882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761FB8ED21FD03970077E882 /* AppDelegate.swift */; };
 		761FB8F021FD03970077E882 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761FB8EF21FD03970077E882 /* ViewController.swift */; };
 		761FB8F321FD03970077E882 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761FB8F121FD03970077E882 /* Main.storyboard */; };
@@ -35,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4BF1A5422BC05F5000F8F45B /* librust-sim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "librust-sim.a"; path = "libs/librust-sim.a"; sourceTree = "<group>"; };
+		4BF1A5522BC05F7400F8F45B /* hello-rust-sim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hello-rust-sim.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BF1A5532BC05F7400F8F45B /* hello-rust copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "hello-rust copy-Info.plist"; path = "/Users/Shared/randymcmillan/rust-ios-example/hello-rust/hello-rust copy-Info.plist"; sourceTree = "<absolute>"; };
 		761FB8EA21FD03970077E882 /* hello-rust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hello-rust.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761FB8ED21FD03970077E882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		761FB8EF21FD03970077E882 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +61,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4BF1A5482BC05F7400F8F45B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BF1A54A2BC05F7400F8F45B /* librust-sim.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		761FB8E721FD03970077E882 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,6 +102,7 @@
 				761FB90C21FD039A0077E882 /* hello-rustUITests */,
 				761FB8EB21FD03970077E882 /* Products */,
 				761FB91B21FD03D40077E882 /* Frameworks */,
+				4BF1A5532BC05F7400F8F45B /* hello-rust copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +112,7 @@
 				761FB8EA21FD03970077E882 /* hello-rust.app */,
 				761FB8FE21FD03990077E882 /* hello-rustTests.xctest */,
 				761FB90921FD039A0077E882 /* hello-rustUITests.xctest */,
+				4BF1A5522BC05F7400F8F45B /* hello-rust-sim.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				761FB91C21FD03D50077E882 /* librust.a */,
+				4BF1A5422BC05F5000F8F45B /* librust-sim.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +160,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4BF1A5442BC05F7400F8F45B /* hello-rust-sim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BF1A54F2BC05F7400F8F45B /* Build configuration list for PBXNativeTarget "hello-rust-sim" */;
+			buildPhases = (
+				4BF1A5452BC05F7400F8F45B /* Sources */,
+				4BF1A5482BC05F7400F8F45B /* Frameworks */,
+				4BF1A54B2BC05F7400F8F45B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hello-rust-sim";
+			productName = "hello-rust";
+			productReference = 4BF1A5522BC05F7400F8F45B /* hello-rust-sim.app */;
+			productType = "com.apple.product-type.application";
+		};
 		761FB8E921FD03970077E882 /* hello-rust */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 761FB91221FD039A0077E882 /* Build configuration list for PBXNativeTarget "hello-rust" */;
@@ -232,11 +269,22 @@
 				761FB8E921FD03970077E882 /* hello-rust */,
 				761FB8FD21FD03990077E882 /* hello-rustTests */,
 				761FB90821FD039A0077E882 /* hello-rustUITests */,
+				4BF1A5442BC05F7400F8F45B /* hello-rust-sim */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4BF1A54B2BC05F7400F8F45B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BF1A54C2BC05F7400F8F45B /* LaunchScreen.storyboard in Resources */,
+				4BF1A54D2BC05F7400F8F45B /* Assets.xcassets in Resources */,
+				4BF1A54E2BC05F7400F8F45B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		761FB8E821FD03970077E882 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +312,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4BF1A5452BC05F7400F8F45B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BF1A5462BC05F7400F8F45B /* ViewController.swift in Sources */,
+				4BF1A5472BC05F7400F8F45B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		761FB8E621FD03970077E882 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,6 +381,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4BF1A5502BC05F7400F8F45B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M684FYCYG6;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
+				INFOPLIST_FILE = "hello-rust copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.bitcoincore.hello-rust";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/include/rust.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BF1A5512BC05F7400F8F45B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M684FYCYG6;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
+				INFOPLIST_FILE = "hello-rust copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.bitcoincore.hello-rust";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/include/rust.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		761FB91021FD039A0077E882 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -573,6 +684,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4BF1A54F2BC05F7400F8F45B /* Build configuration list for PBXNativeTarget "hello-rust-sim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BF1A5502BC05F7400F8F45B /* Debug */,
+				4BF1A5512BC05F7400F8F45B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		761FB8E521FD03970077E882 /* Build configuration list for PBXProject "hello-rust" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
