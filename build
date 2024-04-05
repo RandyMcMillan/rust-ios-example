@@ -1,6 +1,10 @@
 #!/bin/sh
 
 cd rust
+cargo b \
+--target x86_64-apple-ios \
+--target aarch64-apple-ios \
+--target  x86_64-apple-darwin
 cargo lipo --release
 cbindgen src/lib.rs -l c > rust.h
 
