@@ -43,7 +43,7 @@
 /* Begin PBXFileReference section */
 		4BF1A5422BC05F5000F8F45B /* librust-sim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "librust-sim.a"; path = "libs/librust-sim.a"; sourceTree = "<group>"; };
 		4BF1A5522BC05F7400F8F45B /* hello-rust-sim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hello-rust-sim.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BF1A5532BC05F7400F8F45B /* hello-rust copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "hello-rust copy-Info.plist"; path = "/Users/Shared/randymcmillan/rust-ios-example/hello-rust/hello-rust copy-Info.plist"; sourceTree = "<absolute>"; };
+		4BF1A5532BC05F7400F8F45B /* hello-rust-sim-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "hello-rust-sim-Info.plist"; path = "/Users/Shared/randymcmillan/rust-ios-example/hello-rust/hello-rust-sim-Info.plist"; sourceTree = "<absolute>"; };
 		761FB8EA21FD03970077E882 /* hello-rust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hello-rust.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761FB8ED21FD03970077E882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		761FB8EF21FD03970077E882 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 				761FB90C21FD039A0077E882 /* hello-rustUITests */,
 				761FB8EB21FD03970077E882 /* Products */,
 				761FB91B21FD03D40077E882 /* Frameworks */,
-				4BF1A5532BC05F7400F8F45B /* hello-rust copy-Info.plist */,
+				4BF1A5532BC05F7400F8F45B /* hello-rust-sim-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -389,7 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M684FYCYG6;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
-				INFOPLIST_FILE = "hello-rust copy-Info.plist";
+				INFOPLIST_FILE = "hello-rust-sim-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -416,7 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M684FYCYG6;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
-				INFOPLIST_FILE = "hello-rust copy-Info.plist";
+				INFOPLIST_FILE = "hello-rust-sim-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
