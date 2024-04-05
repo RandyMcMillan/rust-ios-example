@@ -16,3 +16,5 @@ cp target/universal/release/librust.a ../hello-rust/libs
 cp target/aarch64-apple-ios-sim/debug/librust.a ../hello-rust/libs/librust-sim.a
 
 cd ../hello-rust && xcodebuild
+
+xcrun xcodebuild   -scheme hello-rust   -project hello-rust.xcodeproj   -configuration Debug   -destination 'platform=iOS Simulator,name=iPhone 6 Plus,OS=9.1'   -derivedDataPath   build
