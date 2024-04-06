@@ -13,10 +13,10 @@
 		4BF1A54A2BC05F7400F8F45B /* librust-sim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF1A5422BC05F5000F8F45B /* librust-sim.a */; };
 		4BF1A54C2BC05F7400F8F45B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761FB8F621FD03990077E882 /* LaunchScreen.storyboard */; };
 		4BF1A54D2BC05F7400F8F45B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761FB8F421FD03990077E882 /* Assets.xcassets */; };
-		4BF1A54E2BC05F7400F8F45B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761FB8F121FD03970077E882 /* Main.storyboard */; };
+		4BF1A54E2BC05F7400F8F45B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761FB8F121FD03970077E882 /* Main.storyboard */; settings = {ASSET_TAGS = (text, ); }; };
 		761FB8EE21FD03970077E882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761FB8ED21FD03970077E882 /* AppDelegate.swift */; };
 		761FB8F021FD03970077E882 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761FB8EF21FD03970077E882 /* ViewController.swift */; };
-		761FB8F321FD03970077E882 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761FB8F121FD03970077E882 /* Main.storyboard */; };
+		761FB8F321FD03970077E882 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761FB8F121FD03970077E882 /* Main.storyboard */; settings = {ASSET_TAGS = (text, ); }; };
 		761FB8F521FD03990077E882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761FB8F421FD03990077E882 /* Assets.xcassets */; };
 		761FB8F821FD03990077E882 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761FB8F621FD03990077E882 /* LaunchScreen.storyboard */; };
 		761FB90321FD03990077E882 /* hello_rustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761FB90221FD03990077E882 /* hello_rustTests.swift */; };
@@ -237,6 +237,10 @@
 		761FB8E221FD03970077E882 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					NoteDetailsViewController,
+					text,
+				);
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "dev.bitcoincore.hello-rust";

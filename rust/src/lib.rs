@@ -8,7 +8,7 @@ pub extern "C" fn rust_hello(to: *const c_char) -> *mut c_char {
         Err(_) => "there",
         Ok(string) => string,
     };
-    CString::new("TEST-Hello ".to_owned() + recipient)
+    CString::new("from-lib.rs->HeLLo ".to_owned() + recipient)
         .unwrap()
         .into_raw()
 }
