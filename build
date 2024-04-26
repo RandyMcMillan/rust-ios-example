@@ -13,9 +13,16 @@ cargo lipo --release
 cbindgen src/lib.rs -l c > rust.h
 
 cp rust.h ../hello-rust/include
+cp rust.h ../Complete/include
+
 cp target/universal/release/librust.a ../hello-rust/libs
+cp target/universal/release/librust.a ../Complete/libs
+
 cp target/aarch64-apple-ios-sim/debug/librust.a ../hello-rust/libs/librust-sim.a
+cp target/aarch64-apple-ios-sim/debug/librust.a ../Complete/libs/librust-sim.a
 
 cd ../hello-rust && xcodebuild
-
 xcrun xcodebuild   -scheme hello-rust   -project hello-rust.xcodeproj   -configuration Debug   -destination 'platform=iOS Simulator,name=iPhone Xs,OS=17.2'   -derivedDataPath   build
+
+cd ../Complete && xcodebuild
+xcrun xcodebuild   -scheme Recipes   -project turning-on-mac-catalyst-complete.xcodeproj   -configuration Debug   -destination 'platform=iOS Simulator,name=iPhone Xs,OS=17.2'   -derivedDataPath   build
