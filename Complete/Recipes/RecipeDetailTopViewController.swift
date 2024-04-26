@@ -49,8 +49,14 @@ extension RecipeDetailTopViewController {
     private func updateUI() {
         guard let recipe = self.recipe else { return }
         
+        let result = rust_hello("world<-from-result")
+        let swift_result = String(cString: result!)
+        //rust_hello_free(UnsafeMutablePointer(mutating: result))
+        print(swift_result)
+        titleLabel.text = swift_result.lowercased()
+        
         imageView.image = recipe.fullImage
-        titleLabel.text = recipe.title
+        //titleLabel.text = recipe.title
         
         let bold = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17)]
         let normal = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
