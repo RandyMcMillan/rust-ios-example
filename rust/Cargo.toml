@@ -9,3 +9,7 @@ edition = "2018"
 [lib]
 name = "rust"
 crate-type = ["staticlib", "cdylib"]
+
+[dev-dependencies]
+cargo-lipo = "3.3.1"
+cbindgen = "0.26.0"
