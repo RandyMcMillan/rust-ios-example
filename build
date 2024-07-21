@@ -32,17 +32,11 @@ rustup default nightly
 install_targets
 
 cd rust
-cargo +nightly b \
+cargo +nightly b -Z build-std \
 --target $UNAME_M-apple-ios \
 --target $UNAME_M-apple-ios-sim \
 --target $UNAME_M-apple-darwin || \
-    rustup target add x86_64-apple-ios
-    rustup target add aarch64-apple-ios
-    rustup target add aarch64-apple-ios-sim
-    rustup toolchain install nightly-aarch64-apple-darwin --force-non-host
-    rustup component add rust-src --toolchain nightly-aarch64-apple-darwin || \
-    rustup target add aarch64-apple-ios-sim aarch64-apple-ios aarch64-apple-darwin x86_64-apple-ios x86_64-apple-darwin
-cargo +nightly build -Z build-std --target aarch64-apple-ios-sim
+cargo +nightly build -Z build-std --target $UNAME_M-apple-ios-sim
 cargo lipo --release
 cbindgen src/lib.rs -l c > rust.h
 

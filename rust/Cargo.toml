@@ -5,6 +5,7 @@ authors = ["Emil Sjölander <emil@visly.app>"]
 edition = "2018"
 
 [dependencies]
+objc = { git = "https://github.com/RandyMcMillan/rust-objc.git", version = "0.2.7" }
 
 [lib]
 name = "rust"

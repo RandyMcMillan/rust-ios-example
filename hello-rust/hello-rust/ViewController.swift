@@ -5,12 +5,15 @@ class ViewController: UIViewController {
 
      override func viewDidLoad() {
          super.viewDidLoad()
-
+         
+         let _ = rust_objc()
+         
          let result = rust_hello("world<-from-result")
          let swift_result = String(cString: result!)
          rust_hello_free(UnsafeMutablePointer(mutating: result))
          print(swift_result)
          self.textView.text = swift_result.lowercased()
+         let _ = rust_objc()
 
      }
 
