@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F7AA12E248700600097AAEE /* RecipeCollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7AA12D248700600097AAEE /* RecipeCollectionsViewController.swift */; };
+		48C55D742BDC665F0044A1A8 /* librust.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C55D732BDC665F0044A1A8 /* librust.a */; };
 		680A3B4F242D332E00630335 /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A3B4E242D332E00630335 /* RecipeListViewController.swift */; };
 		680A3B51242D389200630335 /* RecipeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A3B50242D389200630335 /* RecipeListCell.swift */; };
 		6840AA6A248B00F300BBED58 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6840AA69248B00F300BBED58 /* TabBarController.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		1F7AA12D248700600097AAEE /* RecipeCollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionsViewController.swift; sourceTree = "<group>"; };
+		48C55D732BDC665F0044A1A8 /* librust.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librust.a; path = ../rust/target/universal/release/librust.a; sourceTree = "<group>"; };
 		680A3B4E242D332E00630335 /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
 		680A3B50242D389200630335 /* RecipeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListCell.swift; sourceTree = "<group>"; };
 		6840AA69248B00F300BBED58 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C55D742BDC665F0044A1A8 /* librust.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +136,14 @@
 			path = LICENSE;
 			sourceTree = "<group>";
 		};
+		48C55D722BDC665F0044A1A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48C55D732BDC665F0044A1A8 /* librust.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		684CD653242BCF60004090E5 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +152,7 @@
 				684CD65D242BCF60004090E5 /* Products */,
 				E9A47D8D8B6EBF2E8F139699 /* Configuration */,
 				2EA4CDEC410C08EF7350C51C /* LICENSE */,
+				48C55D722BDC665F0044A1A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
