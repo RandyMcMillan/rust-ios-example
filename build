@@ -1,44 +1,21 @@
 #!/bin/sh
 cd rust
-cargo b -r \
---target x86_64-apple-ios \
---target aarch64-apple-ios \
---target aarch64-apple-ios-sim \
---target x86_64-apple-darwin || \
-    rustup toolchain install nightly-aarch64-apple-darwin --force-non-host
-    rustup component add rust-src --toolchain nightly-aarch64-apple-darwin || \
-    rustup target add aarch64-apple-ios-sim aarch64-apple-ios aarch64-apple-darwin x86_64-apple-ios x86_64-apple-darwin
-
-#cargo +nightly build -r -Z build-std --target aarch64-apple-ios-sim
-cargo +nightly build -r -Z build-std --target x86_64-apple-ios-macabi
+## cargo b \
+## --target x86_64-apple-ios \
+## --target aarch64-apple-ios \
+## --target aarch64-apple-ios-sim \
+## --target x86_64-apple-darwin || \
+##     rustup toolchain install nightly-aarch64-apple-darwin --force-non-host
+##     rustup component add rust-src --toolchain nightly-aarch64-apple-darwin || \
+##     rustup target add aarch64-apple-ios-sim aarch64-apple-ios aarch64-apple-darwin x86_64-apple-ios x86_64-apple-darwin
+## cargo +nightly build -Z build-std --target aarch64-apple-ios-sim
 cargo lipo --release
-file rust/target/universal/release/librust.a
-cp target/universal/release/librust.a ../hello-rust/libs
-cp target/universal/release/librust.a ../Complete/libs
-
 cbindgen src/lib.rs -l c > rust.h
 
 cp rust.h ../hello-rust/include
-cp rust.h ../Complete/include
+cp target/universal/release/librust.a ../hello-rust/libs
+##cp target/aarch64-apple-ios-sim/debug/librust.a ../hello-rust/libs/librust-sim.a
 
-#cp target/aarch64-apple-ios-sim/debug/librust.a ../hello-rust/libs/librust-sim.a
-#cp target/aarch64-apple-ios-sim/debug/librust.a ../Complete/libs/librust-sim.a
+cd ../hello-rust && xcodebuild
 
-## cd ../hello-rust && xcodebuild
-## xcrun xcodebuild \
-##     -scheme hello-rust \
-##     -project hello-rust.xcodeproj \
-##     -configuration Debug \
-##     -destination 'platform=iOS Simulator,name=iPhone Xs,OS=17.2' \
-##     -derivedDataPath build
-
-cd ../Complete && xcodebuild
-xcrun xcodebuild \
-    -scheme Recipes \
-    -project turning-on-mac-catalyst-complete.xcodeproj \
-    -configuration Debug \
-    -destination 'platform=iOS,variant=Mac Catalyst' \
-    -derivedDataPath build
-
-file libs/librust.a
-file libs/librust-sim.a
+xcrun xcodebuild   -scheme hello-rust   -project hello-rust.xcodeproj   -configuration Debug   -destination 'platform=iOS Simulator,name=iPhone Xs,OS=17.2'   -derivedDataPath   build
